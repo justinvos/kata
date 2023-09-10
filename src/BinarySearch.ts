@@ -26,12 +26,3 @@ export function binarySearch<T>(needle: T, haystack: T[]): number {
 
   return -1;
 }
-
-console.log(
-  "BinarySearch with numbers:",
-  binarySearch(3, [1, 2, 3, 4, 5, 6, 7])
-);
-console.log(
-  "BinarySearch with strings:",
-  binarySearch("g", ["a", "c", "d", "e", "f", "g", "h"])
-);
