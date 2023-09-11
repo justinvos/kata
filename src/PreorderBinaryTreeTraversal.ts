@@ -1,8 +1,8 @@
-export function preorderTreeTraversal<T>(root: TreeNode<T>) {
+export function preorderTreeTraversal<T>(root: BinaryTreeNode<T>) {
   return walk(root, []);
 }
 
-function walk<T>(node: TreeNode<T> | null, path: T[]) {
+function walk<T>(node: BinaryTreeNode<T> | null, path: T[]) {
   if (!node) {
     return;
   }
@@ -15,8 +15,8 @@ function walk<T>(node: TreeNode<T> | null, path: T[]) {
   return path;
 }
 
-export type TreeNode<T> = {
+export type BinaryTreeNode<T> = {
   value: T;
-  left: TreeNode<T> | null;
-  right: TreeNode<T> | null;
+  left: BinaryTreeNode<T> | null;
+  right: BinaryTreeNode<T> | null;
 };

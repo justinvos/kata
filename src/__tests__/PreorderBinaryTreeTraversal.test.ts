@@ -1,11 +1,11 @@
 import { expect, test } from "vitest";
 import {
-  TreeNode,
+  BinaryTreeNode,
   preorderTreeTraversal,
 } from "../PreorderBinaryTreeTraversal";
 
 test("preorderTreeTraversal using numbers", () => {
-  const root: TreeNode<number> = {
+  const root: BinaryTreeNode<number> = {
     value: 7,
     left: {
       value: 23,
