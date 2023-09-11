@@ -1,73 +1,73 @@
 import { expect, test } from "vitest";
 import {
   BinaryTreeNode,
-  breadthFirstSearch,
-} from "../BinaryBreadthFirstSearch";
+  depthFirstSearchOnBinarySearchTree,
+} from "../DepthFirstSearchOnBinarySearchTree";
 
-test("breadthFirstSearch for existing value", () => {
+test("depthFirstSearchOnBinarySearchTree for existing value", () => {
   const root: BinaryTreeNode<number> = {
-    value: 7,
+    value: 10,
     left: {
-      value: 23,
+      value: 5,
       left: {
-        value: 5,
+        value: 3,
         left: null,
         right: null,
       },
       right: {
-        value: 4,
+        value: 7,
         left: null,
         right: null,
       },
     },
     right: {
-      value: 8,
+      value: 20,
       left: {
-        value: 21,
+        value: 15,
         left: null,
         right: null,
       },
       right: {
-        value: 15,
+        value: 25,
         left: null,
         right: null,
       },
     },
   };
 
-  expect(breadthFirstSearch(root, 4)).toBe(true);
+  expect(depthFirstSearchOnBinarySearchTree(root, 25)).toBe(true);
 });
 
-test("breadthFirstSearch for missing value", () => {
+test("depthFirstSearchOnBinarySearchTree for missing value", () => {
   const root: BinaryTreeNode<number> = {
-    value: 7,
+    value: 10,
     left: {
-      value: 23,
+      value: 5,
       left: {
-        value: 5,
+        value: 3,
         left: null,
         right: null,
       },
       right: {
-        value: 4,
+        value: 7,
         left: null,
         right: null,
       },
     },
     right: {
-      value: 8,
+      value: 20,
       left: {
-        value: 21,
+        value: 15,
         left: null,
         right: null,
       },
       right: {
-        value: 15,
+        value: 25,
         left: null,
         right: null,
       },
     },
   };
 
-  expect(breadthFirstSearch(root, 6)).toBe(false);
+  expect(depthFirstSearchOnBinarySearchTree(root, 6)).toBe(false);
 });
